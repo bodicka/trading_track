@@ -36,9 +36,11 @@ const SignIn = () => {
           register={register}
           error={errors.email}
           validation={{
-            require: "Email name is required",
-            pattern: /^\w+@\w+\.\w+$/,
-            message: "Email address is required",
+            required: "Email name is required",
+            pattern: {
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              message: "Enter a valid email address",
+            },
           }}
         />
         <InputFill
@@ -48,7 +50,13 @@ const SignIn = () => {
           type="password"
           register={register}
           error={errors.password}
-          validation={{ require: "Password is required", minLength: 8 }}
+          validation={{
+            required: "Password is required",
+            minLength: {
+              value: 8,
+              message: "Password must be at least 8 characters long",
+            },
+          }}
         />
         <Button
           type="submit"
@@ -59,7 +67,7 @@ const SignIn = () => {
         </Button>
         <FooterLink
           text="Don’t have an accoun"
-          href="sign-up"
+          href="/sign-up"
           linkText="Sign Up"
         />
       </form>
