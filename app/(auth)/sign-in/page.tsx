@@ -3,8 +3,12 @@ import { useForm } from "react-hook-form";
 import InputFill from "@/components/forms/InputFill";
 import { Button } from "@/components/ui/button";
 import FooterLink from "@/components/forms/FooterLink";
+import { signInEmailFunctions } from "@/lib/actions/auth.actions";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -19,9 +23,13 @@ const SignIn = () => {
 
   const onSubmit = async (data: SignInFormData) => {
     try {
-      console.log(data);
+      const result = await signInEmailFunctions(data);
+      if (result.success) router.push("/");
     } catch (error) {
-      console.error(error);
+      console.log("Sign in failed", {
+        description:
+          error instanceof Error ? error.message : "Failed to sign in account",
+      });
     }
   };
 
@@ -55,7 +63,7 @@ const SignIn = () => {
           disabled={isSubmitting}
           className="yellow-btn w-full mt-5"
         >
-          Log In
+          Sign In
         </Button>
         <FooterLink
           text="Don’t have an accoun"
