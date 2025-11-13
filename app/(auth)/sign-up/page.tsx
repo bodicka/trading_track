@@ -4,14 +4,19 @@ import FooterLink from "@/components/forms/FooterLink";
 import InputFill from "@/components/forms/InputFill";
 import SelectField from "@/components/forms/SelectField";
 import { Button } from "@/components/ui/button";
+import { signUpEmailFunctions } from "@/lib/actions/auth.actions";
 import {
   INVESTMENT_GOALS,
   PREFERRED_INDUSTRIES,
   RISK_TOLERANCE_OPTIONS,
 } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const SignUp = () => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -32,9 +37,16 @@ const SignUp = () => {
 
   const onSubmit = async (data: SignUpFormData) => {
     try {
-      console.log(data);
+      const result = await signUpEmailFunctions(data);
+      if (result.success) router.push("/");
     } catch (error) {
       console.error(error);
+      toast.error("Sign Up failed", {
+        description:
+          error instanceof Error
+            ? error.message
+            : "Failed to create an account",
+      });
     }
   };
   return (
@@ -47,7 +59,7 @@ const SignUp = () => {
           placeholder="John Doe"
           register={register}
           error={errors.fullName}
-          validation={{ require: "Full name is required", minLength: 2 }}
+          validation={{ required: "Full name is required", minLength: 2 }}
         />
         <InputFill
           name="email"
@@ -56,8 +68,8 @@ const SignUp = () => {
           register={register}
           error={errors.email}
           validation={{
-            require: "Email name is required",
-            pattern: /^\w+@\w+\.\w+$/,
+            required: "Email name is required",
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             message: "Email address is required",
           }}
         />
@@ -68,7 +80,7 @@ const SignUp = () => {
           type="password"
           register={register}
           error={errors.password}
-          validation={{ require: "Password is required", minLength: 8 }}
+          validation={{ required: "Password is required", minLength: 8 }}
         />
         <CountrySelectedField
           name="country"
