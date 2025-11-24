@@ -71,3 +71,4 @@ const StockDetails = async ({ params }: StockDetailsPageProps) => {
 };
 
 export default StockDetails;
+
