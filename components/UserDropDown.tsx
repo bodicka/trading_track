@@ -28,6 +28,13 @@ const UserDropDown = ({
     router.push("/sign-in");
   };
 
+  const initials = user.name
+    .split(" ")
+    .map((n) => n[0])
+    .join(" ")
+    .toUpperCase()
+    .slice(0, 2);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -36,10 +43,7 @@ const UserDropDown = ({
           className="flex items-center gap-3 text-gray-4 hover:text-yellow-500 cursor-pointer"
         >
           <Avatar className="h-8 w-8">
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/159623917?v=4"
-              alt="@bodick"
-            />
+            <AvatarImage src={initials} alt="@bodick" />
             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
               {user.name[0]}
             </AvatarFallback>
@@ -56,7 +60,7 @@ const UserDropDown = ({
           <div className="flex relative items-center gap-3 py-2">
             <Avatar className="h-10 w-10">
               <AvatarImage
-                src="https://avatars.githubusercontent.com/u/159623917?v=4"
+                src={initials}
                 alt="@bodick"
               />
               <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
