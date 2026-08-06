@@ -12,7 +12,7 @@ Trading Track — современное веб-приложение для от
 <table width="100%">
 <tr>
 <td>
-<img src="https://i.postimg.cc/Y03bVYN1/Video-06-08-2026-18-38-02-(5).gif" width="100%" />
+<img src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/f9w1jqd4fabfj6qlm2c6" width="100%" />
 </td>
 <td>
 <img src="https://i.postimg.cc/rpDZmfx8/Video-06-08-2026-18-38-02-(5).gif" width="100%" />
