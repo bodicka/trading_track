@@ -23,7 +23,7 @@ Trading Track — современное веб-приложение для от
 <img src="https://i.postimg.cc/4xY83KbQ/Video-06-08-2026-18-38-02-(3).gif" width="100%"/>
 </td>
 <td>
-<img src="https://i.postimg.cc/LsDkm2gK/Video-06-08-2026-18-20-58-full.gif"/>
+<img src="https://i.postimg.cc/LsDkm2gK/Video-06-08-2026-18-20-58-full.gif" width="100%"/>
 </td>
 </tr>
 </table>
