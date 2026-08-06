@@ -12,18 +12,18 @@ Trading Track — современное веб-приложение для от
 <table>
 <tr>
 <td>
-<img src="https://i.postimg.cc/90B03FNs/Video-06-08-2026-18-38-02.gif"/>
+<img src="https://i.postimg.cc/90B03FNs/Video-06-08-2026-18-38-02.gif" width="100%"/>
 </td>
 <td>
-<img src="https://i.postimg.cc/3R52YNn0/Video-06-08-2026-18-38-02-(1).gif"/>
+<img src="https://i.postimg.cc/3R52YNn0/Video-06-08-2026-18-38-02-(1).gif" width="100%"/>
 </td>
 </tr>
 <tr>
 <td>
-<img src="https://i.postimg.cc/Dfby15vR/Video-06-08-2026-18-38-02-(2).gif"/>
+<img src="https://i.postimg.cc/Dfby15vR/Video-06-08-2026-18-38-02-(2).gif" width="100%"/>
 </td>
 <td>
-<img src="https://i.postimg.cc/4xY83KbQ/Video-06-08-2026-18-38-02-(3).gif"/>
+<img src="https://i.postimg.cc/4xY83KbQ/Video-06-08-2026-18-38-02-(3).gif" width="100%"/>
 </td>
 </tr>
 </table>
