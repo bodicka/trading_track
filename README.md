@@ -2,7 +2,7 @@
 
 <!-- ССЫЛКА НА YOUTUBE -->
 
-[![https://skrinshoter.ru/scrg7sW7ydn]()](YOUTUBE_LINK)
+[![Watch the video](https://skrinshoter.ru/s/060826/g7sW7ydn.jpg?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-06-08-2026%2018:10:56.jpg)](YOUTUBE_LINK)
 
 ---
 
