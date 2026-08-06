@@ -28,3 +28,5 @@ Trading Track — современное веб-приложение для от
 </tr>
 </table>
 </div>
+
+[![Video-06-08-2026-18-38-02-(5).gif](https://i.postimg.cc/Y03bVYN1/Video-06-08-2026-18-38-02-(5).gif)](https://postimg.cc/SYn6YXvs)
