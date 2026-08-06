@@ -2,7 +2,7 @@
 
 <!-- ССЫЛКА НА YOUTUBE -->
 
-[![Watch the video](POSTER_IMAGE)](YOUTUBE_LINK)
+[![Watch the video](https://skrinshoter.ru/scrg7sW7ydn)](YOUTUBE_LINK)
 
 ---
 
