@@ -46,7 +46,7 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg" height="60" alt="React Hook Form"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_ZOD_ЛОГО" height="60" alt="Zod"/>
+<img src="https://zod.dev/_next/image?url=%2Flogo%2Flogo-glow.png&w=256&q=100" height="60" alt="Zod"/>
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_INNGEST_ЛОГО" height="60" alt="Inngest"/>
 &nbsp;&nbsp;
