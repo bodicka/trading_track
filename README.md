@@ -42,8 +42,6 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_MONGODB_ЛОГО" height="40" alt="MongoDB"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_MONGOOSE_ЛОГО" height="40" alt="Mongoose"/>
-&nbsp;&nbsp;
 <img src="ССЫЛКА_НА_BETTER_AUTH_ЛОГО" height="40" alt="Better Auth"/>
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="40" alt="React Hook Form"/>
@@ -63,7 +61,6 @@ Trading Track — современное веб-приложение для от
 <b>TypeScript</b> •
 <b>Tailwind CSS</b> •
 <b>MongoDB</b> •
-<b>Mongoose</b> •
 <b>Better Auth</b> •
 <b>React Hook Form</b> •
 <b>Zod</b> •
