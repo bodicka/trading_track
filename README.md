@@ -25,3 +25,51 @@ Trading Track — современное веб-приложение для от
 <p align="center">
 <b>▶ Watch Full Demo on YouTube</b>
 </p>
+
+---
+
+<h2 align="center">🛠️ Технологический стек</h2>
+
+<p align="center">
+
+<img src="ССЫЛКА_НА_NEXTJS_ЛОГО" height="40" alt="Next.js"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_REACT_ЛОГО" height="40" alt="React"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_TYPESCRIPT_ЛОГО" height="40" alt="TypeScript"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_TAILWIND_ЛОГО" height="40" alt="Tailwind CSS"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_MONGODB_ЛОГО" height="40" alt="MongoDB"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_MONGOOSE_ЛОГО" height="40" alt="Mongoose"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_BETTER_AUTH_ЛОГО" height="40" alt="Better Auth"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="40" alt="React Hook Form"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_ZOD_ЛОГО" height="40" alt="Zod"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_INNGEST_ЛОГО" height="40" alt="Inngest"/>
+&nbsp;&nbsp;
+<img src="ССЫЛКА_НА_TRADINGVIEW_ЛОГО" height="40" alt="TradingView"/>
+
+</p>
+
+<p align="center">
+
+<b>Next.js 16</b> •
+<b>React 19</b> •
+<b>TypeScript</b> •
+<b>Tailwind CSS</b> •
+<b>MongoDB</b> •
+<b>Mongoose</b> •
+<b>Better Auth</b> •
+<b>React Hook Form</b> •
+<b>Zod</b> •
+<b>Inngest</b> •
+<b>TradingView Widget</b>
+
+</p>
+
+---
