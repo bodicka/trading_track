@@ -32,25 +32,25 @@ Trading Track — современное веб-приложение для от
 
 <p align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" height="60" alt="Next.js"/>
 &nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" alt="React"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" height="60" alt="React"/>
 &nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height="60" alt="TypeScript"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_TAILWIND_ЛОГО" height="40" alt="Tailwind CSS"/>
+<img src="ССЫЛКА_НА_TAILWIND_ЛОГО" height="60" alt="Tailwind CSS"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_MONGODB_ЛОГО" height="40" alt="MongoDB"/>
+<img src="ССЫЛКА_НА_MONGODB_ЛОГО" height="60" alt="MongoDB"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_BETTER_AUTH_ЛОГО" height="40" alt="Better Auth"/>
+<img src="ССЫЛКА_НА_BETTER_AUTH_ЛОГО" height="60" alt="Better Auth"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="40" alt="React Hook Form"/>
+<img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="60" alt="React Hook Form"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_ZOD_ЛОГО" height="40" alt="Zod"/>
+<img src="ССЫЛКА_НА_ZOD_ЛОГО" height="60" alt="Zod"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_INNGEST_ЛОГО" height="40" alt="Inngest"/>
+<img src="ССЫЛКА_НА_INNGEST_ЛОГО" height="60" alt="Inngest"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_TRADINGVIEW_ЛОГО" height="40" alt="TradingView"/>
+<img src="ССЫЛКА_НА_TRADINGVIEW_ЛОГО" height="60" alt="TradingView"/>
 
 </p>
 
