@@ -182,7 +182,10 @@ export const signInEmailFunctions = async ({ email, password }: SignInFormData) 
   <h4 align="left">5. MongoDB - <img align="center" gap="10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" alt="mongodb-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    MongoDB используется как база данных для хранения пользовательских данных и связанных с ними данных авторизации. В проекте подключение осуществляется через Mongoose и адаптер для Better Auth.
+    MongoDB — это NoSQL-база данных, которая хранит данные в формате документов JSON-like. В этом проекте она используется как основное хранилище для авторизации и пользовательских данных. Благодаря MongoDB приложение может быстро работать с данными пользователя, а также удобно масштабироваться при добавлении новых сущностей.
+  </p>
+  <p>
+    В проекте MongoDB подключается через Mongoose, который добавляет схему, модели и удобный уровень абстракции над коллекциями. Это особенно полезно для работы с auth-сессиями, пользователями и будущими расширениями проекта.
   </p>
 </div>
 
@@ -194,7 +197,9 @@ export const conectDataBase = async () => {
 ```
 
 <div align="left">
-  <p>Этот код обеспечивает подключение приложения к MongoDB перед работой с пользователями и сессиями.</p>
+  <p>
+    Этот фрагмент выполняет подключение к MongoDB при запуске приложения. После этого Better Auth может использовать базу для хранения пользователей, сессий и связанных данных.
+  </p>
 </div>
 
 <hr>
@@ -204,17 +209,41 @@ export const conectDataBase = async () => {
   <h4 align="left">6. Better Auth - <img align="center" gap="10" src="https://images.seeklogo.com/logo-png/65/1/better-auth-logo-png_seeklogo-653267.png" alt="better-auth-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    Better Auth используется для регистрации, входа и управления сессиями пользователей. Это облегчает интеграцию аутентификации без написания полноценной собственной backend-логики.
+    Better Auth — это современная библиотека для аутентификации в Next.js и React-приложениях. Она решает задачи регистрации, входа по email/password, управления сессиями и работы с cookies. В этом проекте она является ключевым инструментом для защиты маршрутов и персонализированного доступа к интерфейсу.
+  </p>
+  <p>
+    Благодаря Better Auth разработчику не нужно вручную писать собственную систему логина и хранения сессий. Библиотека берёт на себя логику создания пользователя, проверки пароля, управления токенами и сессиями.
   </p>
 </div>
 
 ```ts
 // lib/better-auth/auth.ts
-export const auth = await getAuth();
+export const getAuth = async () => {
+  const mongoose = await conectDataBase();
+  const db = mongoose.connection.db;
+
+  authInstance = betterAuth({
+    database: mongodbAdapter(db),
+    secret: process.env.BETTER_AUTH_SECRET,
+    baseURL: process.env.BETTER_AUTH_URL,
+    emailAndPassword: {
+      enabled: true,
+      disableSignUp: false,
+      requireEmailVerification: false,
+      minPasswordLength: 8,
+      autoSignIn: true,
+    },
+    plugins: [nextCookies()],
+  });
+
+  return authInstance;
+};
 ```
 
 <div align="left">
-  <p>Через эту конфигурацию приложение получает доступ к API регистрации, входа и работы с текущей сессией пользователя.</p>
+  <p>
+    В этом фрагменте создаётся экземпляр Better Auth, который подключается к MongoDB через адаптер и настраивает email/password-авторизацию. После этого этот экземпляр используется в серверных действиях и в layout для проверки текущей сессии пользователя.
+  </p>
 </div>
 
 <hr>
@@ -224,16 +253,27 @@ export const auth = await getAuth();
   <h4 align="left">7. React Hook Form - <img align="center" gap="10" src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg" alt="react-hook-form-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    React Hook Form применяется для удобной работы с формами регистрации и входа. Библиотека помогает управлять состоянием полей, валидацией и отправкой данных.
+    React Hook Form — это библиотека для работы с формами в React, которая помогает управлять состоянием полей, валидацией и отправкой данных без лишнего кода. В проекте она используется в формах регистрации и входа, где нужно быстро получать данные пользователя и проверять их корректность.
+  </p>
+  <p>
+    В отличие от обычного управляемого состояния, здесь логика формы становится проще и понятнее. Разработчику не нужно вручную писать много обработчиков для каждого input — достаточно зарегистрировать поле и передать его в handleSubmit.
   </p>
 </div>
 
 ```tsx
-const { register, handleSubmit } = useForm<SignInFormData>();
+// app/(auth)/sign-in/page.tsx
+const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<SignInFormData>();
+
+const onSubmit = async (data: SignInFormData) => {
+  const result = await signInEmailFunctions(data);
+  if (result.success) router.push("/");
+};
 ```
 
 <div align="left">
-  <p>Благодаря такому подходу формы становятся проще, чище и удобнее для поддержки.</p>
+  <p>
+    В этом примере React Hook Form собирает данные из формы, передаёт их в обработчик onSubmit и затем вызывает серверное действие для входа. Благодаря этому код формы остаётся компактным, а логика валидации и отправки данных вынесена в понятный и безопасный поток.
+  </p>
 </div>
 
 <hr>
@@ -243,11 +283,15 @@ const { register, handleSubmit } = useForm<SignInFormData>();
   <h4 align="left">8. Zod - <img align="center" gap="10" src="https://zod.dev/_next/image?url=%2Flogo%2Flogo-glow.png&w=256&q=100" alt="zod-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    Zod используется для валидации данных. В проекте он помогает проверять корректность входных данных из форм и защищать приложение от некорректного ввода.
+    Zod — это библиотека для строгой валидации данных в TypeScript. Она позволяет описывать структуру данных и автоматически проверять, что входные значения соответствуют ожидаемому формату. В этом проекте Zod особенно полезен для форм регистрации и входа, где важно убедиться, что email, пароль и другие значения корректны перед отправкой на сервер.
+  </p>
+  <p>
+    Благодаря Zod приложение получает дополнительный уровень защиты: если пользователь отправил пустое поле, слишком короткий пароль или невалидный email, такие данные не пройдут проверку и будут отклонены ещё до выполнения логики приложения.
   </p>
 </div>
 
 ```ts
+// Пример структуры данных формы
 const schema = z.object({
   email: z.string().email(),
   password: z.string().min(8),
@@ -255,7 +299,9 @@ const schema = z.object({
 ```
 
 <div align="left">
-  <p>Такая схема гарантирует, что данные соответствуют ожидаемому формату перед отправкой.</p>
+  <p>
+    В реальном сценарии эта схема помогает проверить, что email имеет корректный формат, а пароль не меньше 8 символов. Если данные не проходят проверку, запрос не отправляется дальше, и приложение не получает некорректную информацию.
+  </p>
 </div>
 
 <hr>
@@ -265,7 +311,10 @@ const schema = z.object({
   <h4 align="left">9. Inngest - <img align="center" gap="10" src="https://images.seeklogo.com/logo-png/65/1/inngest-logo-png_seeklogo-653438.png" alt="inngest-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    Inngest используется для фоновой обработки событий, например отправки приветственного письма после регистрации. Он помогает вынести такие задачи из основного пользовательского потока.
+    Inngest — это инструмент для работы с фоновыми событиями и job-обработкой. Он позволяет запускать задачи после определённых действий пользователя, не блокируя основной интерфейс. В этом проекте он используется после регистрации: как только пользователь создаёт аккаунт, система создаёт событие, а Inngest запускает обработку приветственного письма.
+  </p>
+  <p>
+    Такая архитектура полезна тем, что регистрация не “зависает” на отправке письма, а вся дополнительная логика выполняется в фоне. Это делает приложение быстрее и надёжнее, особенно если внешняя интеграция, например Resend или Yandex GPT, работает медленно.
   </p>
 </div>
 
@@ -277,8 +326,25 @@ export const { GET, POST, PUT } = serve({
 });
 ```
 
+```ts
+// lib/actions/auth.actions.ts
+await inngest.send({
+  name: "app/user.created",
+  data: {
+    email,
+    name: fullName,
+    country,
+    investmentGoals,
+    riskTolerance,
+    preferredIndustry,
+  },
+});
+```
+
 <div align="left">
-  <p>Здесь запускается обработка события регистрации и выполняется последующая бизнес-логика.</p>
+  <p>
+    После регистрации проект отправляет событие app/user.created в Inngest. Это запускает фоновую обработку, где генерируется приветственный текст и отправляется письмо. Благодаря этому пользовательский поток не тормозится и остаётся быстрым и понятным.
+  </p>
 </div>
 
 <hr>
@@ -288,17 +354,39 @@ export const { GET, POST, PUT } = serve({
   <h4 align="left">10. TradingView - <img align="center" gap="10" src="https://i.pinimg.com/736x/87/08/1e/87081ed023df23521c5f314e97f7b2d0.jpg" alt="tradingview-logo" height="35" /><img width="12" /></h4>
   <hr>
   <p>
-    TradingView интегрируется в проект для отображения финансовых графиков, новостей, heatmap и анализа рынка. Благодаря этому пользователь может смотреть актуальные биржевые данные прямо в интерфейсе приложения.
+    TradingView — это популярная платформа для финансовых графиков и анализа рынка. В проекте она используется как визуальный слой для отображения актуальных данных по акциям, новостям, heatmap и различным техническим инструментам. Благодаря этой интеграции интерфейс приложения становится похожим на полноценную финансовую панель.
+  </p>
+  <p>
+    В проекте виджеты подключаются динамически: приложение подгружает внешний скрипт TradingView и передаёт нужную конфигурацию, например символ акции, период графика или тип панели. Это позволяет использовать один и тот же компонент на разных страницах: на главной для обзора рынка и на странице конкретной акции для детального анализа.
   </p>
 </div>
 
 ```tsx
 // components/TradingViewWidget.tsx
-const containerRef = useTradingViewWidget(scriptUrl, config, height);
+const TradingViewWidget = ({ title, scriptUrl, config, height = 600 }) => {
+  const containerRef = useTradingViewWidget(scriptUrl, config, height);
+
+  return (
+    <div className="w-full">
+      {title && <h3>{title}</h3>}
+      <div ref={containerRef} className="tradingview-widget-container" />
+    </div>
+  );
+};
+```
+
+```tsx
+// hooks/useTradingViewWidget.tsx
+const script = document.createElement("script");
+script.src = scriptUrl;
+script.async = true;
+script.innerHTML = JSON.stringify(config);
+containerRef.current.appendChild(script);
 ```
 
 <div align="left">
-  <p>Этот код динамически подключает виджет TradingView и отображает нужный график или панель в зависимости от конфигурации.</p>
+  <p>
+    В этом примере видно, как приложение подгружает TradingView-скрипт на страницу и передаёт ему конфигурацию виджета. Такой подход позволяет использовать один и тот же компонент для разных панелей: market overview, heatmap, технический анализ и другие.
+  </p>
 </div>
-
 ---
