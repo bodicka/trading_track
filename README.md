@@ -18,10 +18,7 @@ Trading Track — современное веб-приложение для от
   - [Почему App Router?](#почему-app-router)
   - [Почему Better Auth?](#почему-better-auth)
   - [Почему MongoDB?](#почему-mongodb)
-  - [Почему Server Actions?](#почему-server-actions-вместо-rest-api)
   - [Почему Inngest?](#почему-inngest)
-  - [Почему React Server Components?](#почему-react-server-components)
-- [🚀 Установка и запуск](#-установка-и-запуск)
 ---
 
 <h3 align="center">🎥 Project Demo</h3>
