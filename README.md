@@ -52,6 +52,62 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="https://i.pinimg.com/736x/87/08/1e/87081ed023df23521c5f314e97f7b2d0.jpg" height="60" alt="TradingView"/>
 
+<table align="center">
+<tr>
+<td align="center" width="120">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" height="60"/><br>
+<b>Next.js 16</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" height="60"/><br>
+<b>React 19</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height="60"/><br>
+<b>TypeScript</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" height="60"/><br>
+<b>Tailwind CSS</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" height="60"/><br>
+<b>MongoDB</b>
+</td>
+</tr>
+
+<tr>
+<td align="center" width="120">
+<img src="https://images.seeklogo.com/logo-png/65/1/better-auth-logo-png_seeklogo-653267.png" height="60"/><br>
+<b>Better Auth</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg" height="60"/><br>
+<b>React Hook Form</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://zod.dev/_next/image?url=%2Flogo%2Flogo-glow.png&w=256&q=100" height="60"/><br>
+<b>Zod</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://images.seeklogo.com/logo-png/65/1/inngest-logo-png_seeklogo-653438.png" height="60"/><br>
+<b>Inngest</b>
+</td>
+
+<td align="center" width="120">
+<img src="https://i.pinimg.com/736x/87/08/1e/87081ed023df23521c5f314e97f7b2d0.jpg" height="60"/><br>
+<b>TradingView</b>
+</td>
+</tr>
+</table>
+
 </p>
 
 <p align="center">
