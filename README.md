@@ -44,7 +44,7 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="https://images.seeklogo.com/logo-png/65/1/better-auth-logo-png_seeklogo-653267.png" height="60" alt="Better Auth"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="60" alt="React Hook Form"/>
+<img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg" height="60" alt="React Hook Form"/>
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_ZOD_ЛОГО" height="60" alt="Zod"/>
 &nbsp;&nbsp;
