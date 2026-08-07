@@ -32,7 +32,7 @@ Trading Track — современное веб-приложение для от
 
 <p align="center">
 
-<img src="ССЫЛКА_НА_NEXTJS_ЛОГО" height="40" alt="Next.js"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" height="40" alt="Next.js"/>
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_REACT_ЛОГО" height="40" alt="React"/>
 &nbsp;&nbsp;
