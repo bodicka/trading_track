@@ -389,4 +389,189 @@ containerRef.current.appendChild(script);
     В этом примере видно, как приложение подгружает TradingView-скрипт на страницу и передаёт ему конфигурацию виджета. Такой подход позволяет использовать один и тот же компонент для разных панелей: market overview, heatmap, технический анализ и другие.
   </p>
 </div>
+
+---
+
+<h2 align="center">🏗️ Архитектурные решения</h2>
+
+<p align="left">
+  В процессе разработки я сознательно выбирал технологии не только по внешней популярности, но и по тому, насколько они подходят именно для этого проекта. Ниже — архитектурные решения, которые определили структуру приложения и стиль его разработки.
+</p>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему Better Auth?</h4>
+  <hr>
+  <p>
+    Для авторизации я выбрал Better Auth, потому что он позволяет быстро и безопасно внедрить регистрацию, вход по email/password и управление сессиями без необходимости писать собственную систему аутентификации с нуля.
+  </p>
+</div>
+
+```ts
+// lib/better-auth/auth.ts
+export const getAuth = async () => {
+  const mongoose = await conectDataBase();
+  const db = mongoose.connection.db;
+
+  authInstance = betterAuth({
+    database: mongodbAdapter(db),
+    secret: process.env.BETTER_AUTH_SECRET,
+    baseURL: process.env.BETTER_AUTH_URL,
+    emailAndPassword: {
+      enabled: true,
+      disableSignUp: false,
+      requireEmailVerification: false,
+      minPasswordLength: 8,
+      autoSignIn: true,
+    },
+    plugins: [nextCookies()],
+  });
+
+  return authInstance;
+};
+```
+
+<div align="left">
+  <p>
+    Этот код показывает, почему Better Auth был выбран: он сразу даёт готовую инфраструктуру для auth, интеграции с MongoDB и работы с cookies в Next.js.
+  </p>
+</div>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему MongoDB?</h4>
+  <hr>
+  <p>
+    MongoDB был выбран как база данных, потому что проект работает с гибкими и быстро меняющимися данными: пользователями, сессиями и будущими расширениями. Документная модель данных здесь удобнее, чем сложная SQL-структура.
+  </p>
+</div>
+
+```ts
+// database/mongoose.ts
+export const conectDataBase = async () => {
+  return mongoose.connect(process.env.MONGODB_URI!);
+};
+```
+
+<div align="left">
+  <p>
+    Подключение к MongoDB через Mongoose позволяет приложению работать с базой данных как с частью общей архитектуры, не раздувая проект лишними слоями.
+  </p>
+</div>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему App Router?</h4>
+  <hr>
+  <p>
+    App Router был выбран, потому что проект строится на современных возможностях Next.js: маршрутизация через папки, layout, серверные компоненты и удобная организация структуры приложения.
+  </p>
+</div>
+
+```text
+app/
+  (auth)/sign-in/page.tsx
+  (auth)/sign-up/page.tsx
+  (root)/page.tsx
+  (root)/stock/[symbol]/page.tsx
+  api/inngest/route.ts
+```
+
+<div align="left">
+  <p>
+    Такая структура делает проект понятным: UI-страницы, защищённые маршруты и API-эндпоинты живут в логически разделённых частях приложения.
+  </p>
+</div>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему Server Actions?</h4>
+  <hr>
+  <p>
+    Server Actions были выбраны, чтобы не создавать лишние REST API для простых операций. В проекте это особенно удобно для регистрации, входа и других пользовательских действий.
+  </p>
+</div>
+
+```ts
+// lib/actions/auth.actions.ts
+export const signUpEmailFunctions = async ({ email, password, fullName }: SignUpFormData) => {
+  const response = await auth.api.signUpEmail({
+    body: { email, password, name: fullName },
+  });
+
+  return { success: true, data: response };
+};
+```
+
+<div align="left">
+  <p>
+    Такой подход позволяет вызывать серверную логику прямо из компонентов, не добавляя отдельные API-роуты для каждого действия.
+  </p>
+</div>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему Inngest?</h4>
+  <hr>
+  <p>
+    Inngest был выбран для фоновых операций, потому что отправка письма и генерация контента — это задачи, которые не должны блокировать основную регистрацию пользователя.
+  </p>
+</div>
+
+```ts
+// lib/actions/auth.actions.ts
+await inngest.send({
+  name: "app/user.created",
+  data: {
+    email,
+    name: fullName,
+    country,
+    investmentGoals,
+    riskTolerance,
+    preferredIndustry,
+  },
+});
+```
+
+<div align="left">
+  <p>
+    Благодаря этому пользователь сразу получает результат регистрации, а дополнительные процессы выполняются асинхронно в фоне.
+  </p>
+</div>
+
+<hr>
+<br>
+
+<div align="left">
+  <h4 align="left">Почему TradingView?</h4>
+  <hr>
+  <p>
+    TradingView был выбран как готовое решение для финансовых графиков, потому что он даёт профессиональные виджеты без необходимости строить сложную аналитическую систему с нуля.
+  </p>
+</div>
+
+```tsx
+// hooks/useTradingViewWidget.tsx
+const script = document.createElement("script");
+script.src = scriptUrl;
+script.async = true;
+script.innerHTML = JSON.stringify(config);
+containerRef.current.appendChild(script);
+```
+
+<div align="left">
+  <p>
+    Такой подход позволяет быстро и гибко интегрировать настраиваемые финансовые панели прямо в интерфейс приложения.
+  </p>
+</div>
 ---
