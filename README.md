@@ -42,9 +42,7 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" height="60" alt="MongoDB"/>
 &nbsp;&nbsp;
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
-    <path fill="#fff" d="M200 0h200v300H200V200h100V100H200zM0 0h100v100h100v100H100v100H0z" />
-</svg>
+<img src="https://images.seeklogo.com/logo-png/65/1/better-auth-logo-png_seeklogo-653267.png" height="60" alt="Better Auth"/>
 &nbsp;&nbsp;
 <img src="ССЫЛКА_НА_REACT_HOOK_FORM_ЛОГО" height="60" alt="React Hook Form"/>
 &nbsp;&nbsp;
