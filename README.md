@@ -8,23 +8,20 @@ Trading Track — современное веб-приложение для от
 
 </p>
 
-<div align="center">
-<table width="100%">
-<tr>
-<td>
-<img src="https://i.postimg.cc/wMD4c3jv/Video-06-08-2026-18-20-58-(1).gif" width="100%" />
-</td>
-<td>
-<img src="https://i.postimg.cc/VLBXqXmF/Video-06-08-2026-18-38-02.gif" width="100%" />
-</td>
-</tr>
-<tr>
-<td>
-<img src="https://i.postimg.cc/4xY83KbQ/Video-06-08-2026-18-38-02-(3).gif" width="100%" />
-</td>
-<td>
-<img src="https://i.postimg.cc/nVW8GQct/Video-06-08-2026-18-20-58-(1).gif" width="100%" />
-</td>
-</tr>
-</table>
-</div>
+---
+
+<h3 align="center">🎥 Project Demo</h3>
+
+<p align="center">
+Нажмите на изображение ниже, чтобы посмотреть полную демонстрацию приложения.
+</p>
+
+<p align="center">
+<a href="#">
+    <img src="" width="900" alt="Trading Track Demo"/>
+</a>
+</p>
+
+<p align="center">
+<b>▶ Watch Full Demo on YouTube</b>
+</p>
