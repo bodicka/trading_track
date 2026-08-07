@@ -32,26 +32,6 @@ Trading Track — современное веб-приложение для от
 
 <p align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" height="60" alt="Next.js"/>
-&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" height="60" alt="React"/>
-&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height="60" alt="TypeScript"/>
-&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" height="60" alt="Tailwind CSS"/>
-&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" height="60" alt="MongoDB"/>
-&nbsp;&nbsp;
-<img src="https://images.seeklogo.com/logo-png/65/1/better-auth-logo-png_seeklogo-653267.png" height="60" alt="Better Auth"/>
-&nbsp;&nbsp;
-<img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg" height="60" alt="React Hook Form"/>
-&nbsp;&nbsp;
-<img src="https://zod.dev/_next/image?url=%2Flogo%2Flogo-glow.png&w=256&q=100" height="60" alt="Zod"/>
-&nbsp;&nbsp;
-<img src="https://images.seeklogo.com/logo-png/65/1/inngest-logo-png_seeklogo-653438.png" height="60" alt="Inngest"/>
-&nbsp;&nbsp;
-<img src="https://i.pinimg.com/736x/87/08/1e/87081ed023df23521c5f314e97f7b2d0.jpg" height="60" alt="TradingView"/>
-
 <table align="center">
 <tr>
 <td align="center" width="120">
@@ -107,21 +87,6 @@ Trading Track — современное веб-приложение для от
 </td>
 </tr>
 </table>
-
-</p>
-
-<p align="center">
-
-<b>Next.js 16</b> •
-<b>React 19</b> •
-<b>TypeScript</b> •
-<b>Tailwind CSS</b> •
-<b>MongoDB</b> •
-<b>Better Auth</b> •
-<b>React Hook Form</b> •
-<b>Zod</b> •
-<b>Inngest</b> •
-<b>TradingView Widget</b>
 
 </p>
 
