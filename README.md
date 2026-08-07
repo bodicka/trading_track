@@ -48,9 +48,9 @@ Trading Track — современное веб-приложение для от
 &nbsp;&nbsp;
 <img src="https://zod.dev/_next/image?url=%2Flogo%2Flogo-glow.png&w=256&q=100" height="60" alt="Zod"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_INNGEST_ЛОГО" height="60" alt="Inngest"/>
+<img src="https://images.seeklogo.com/logo-png/65/1/inngest-logo-png_seeklogo-653438.png" height="60" alt="Inngest"/>
 &nbsp;&nbsp;
-<img src="ССЫЛКА_НА_TRADINGVIEW_ЛОГО" height="60" alt="TradingView"/>
+<img src="https://i.pinimg.com/736x/87/08/1e/87081ed023df23521c5f314e97f7b2d0.jpg" height="60" alt="TradingView"/>
 
 </p>
 
