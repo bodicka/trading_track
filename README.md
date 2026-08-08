@@ -630,3 +630,41 @@ containerRef.current.appendChild(script);
   </p>
 </div>
 ---
+---
+
+# 🎯 Заключение
+
+**Trading Track** — это полноценный веб-проект, в котором я реализовал не только пользовательский интерфейс, но и серверную логику, аутентификацию, работу с базой данных, интеграцию внешних API и фоновые задачи.
+
+В процессе разработки я получил практический опыт работы с **Next.js App Router, React Server Components, Server Actions, Better Auth, MongoDB, Inngest и TradingView**, а также уделил внимание разделению ответственности между компонентами и серверной логикой.
+
+Проект стал практической площадкой для применения современных подходов к разработке full-stack приложений на TypeScript и Next.js.
+
+Спасибо за просмотр проекта!  
+Буду рад обратной связи и новым идеям по его развитию.
+
+---
+
+# 📬 Контакты
+
+<p align="center">
+
+<a href="https://github.com/bodicka">
+  <img src="https://img.shields.io/badge/GitHub-bodicka-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+
+<a href="ССЫЛКА_НА_LINKEDIN">
+  <img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
+</a>
+
+<a href="ССЫЛКА_НА_TELEGRAM">
+  <img src="https://img.shields.io/badge/Telegram-Contact-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram"/>
+</a>
+
+</p>
+
+<p align="center">
+⭐ Если проект был интересен, буду рад вашей поддержке!
+</p>
+
+---
