@@ -18,6 +18,7 @@ Trading Track — современное веб-приложение для от
   - [Почему Better Auth?](#почему-better-auth)
   - [Почему MongoDB?](#почему-mongodb)
   - [Почему Inngest?](#почему-inngest)
+- [📬 Контакты](#️Контакты)
 ---
 
 <h3 align="center">🎥 Project Demo</h3>
