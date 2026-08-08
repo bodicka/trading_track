@@ -653,14 +653,9 @@ containerRef.current.appendChild(script);
   <img src="https://img.shields.io/badge/GitHub-bodicka-181717?style=for-the-badge&logo=github" alt="GitHub"/>
 </a>
 
-<a href="ССЫЛКА_НА_LINKEDIN">
-  <img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
-</a>
-
-<a href="ССЫЛКА_НА_TELEGRAM">
+<a href="https://t.me/bogdasha03">
   <img src="https://img.shields.io/badge/Telegram-Contact-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram"/>
 </a>
-
 </p>
 
 <p align="center">
